@@ -3,7 +3,7 @@ import { Controller } from "@hotwired/stimulus";
 // Connects to data-controller="bs-modal"
 export default class extends Controller {
   connect() {
-    console.log("I Am Also Connected!!!");
+    console.log("BS Modal controller connected", this.element);
     this.modal = new bootstrap.Modal(this.element, {
       keyboard: false,
     });

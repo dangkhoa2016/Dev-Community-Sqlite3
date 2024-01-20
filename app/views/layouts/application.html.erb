@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>DevCommunity</title>
+    <title>Dev Community</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,16 +11,14 @@
   </head>
 
   <body>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-10 mx-auto">
-          <%= render "shared/header" %>
-        </div>
+    <div class="container-fluid">
+      <%= render "shared/header" %>
+      
       <%= yield %>
+      
       <%= turbo_frame_tag 'remote_modal'%>
-      <div class="col-lg-10 mx-auto">
-        <%= render "shared/footer" %>
-      </div>
+      
+      <%= render "shared/footer" %>
     </div>
   </body>
 </html>

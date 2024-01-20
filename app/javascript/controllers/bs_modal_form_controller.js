@@ -3,7 +3,7 @@ import { Controller } from "@hotwired/stimulus";
 // Connects to data-controller="bs-modal-form"
 export default class extends Controller {
   connect() {
-    console.log("I am connected!!");
+    console.log("BS Modal Form controller connected", this.element);
   }
 
   initialize() {

@@ -2,7 +2,9 @@ import { Controller } from "@hotwired/stimulus";
 
 // Connects to data-controller="update-connection-status"
 export default class extends Controller {
-  connect() {}
+  connect() {
+    console.log("Update Connection Status controller connected", this.element);
+  }
 
   initialize() {
     this.element.setAttribute(

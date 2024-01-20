@@ -101,8 +101,6 @@ GEM
       responders
       warden (~> 1.2.3)
     diff-lcs (1.5.0)
-    dockerfile-rails (1.6.1)
-      rails (>= 3.0.0)
     erubi (1.12.0)
     factory_bot (6.4.2)
       activesupport (>= 5.0.0)
@@ -201,7 +199,6 @@ GEM
     parser (3.2.2.4)
       ast (~> 2.4.1)
       racc
-    pg (1.4.6)
     public_suffix (5.0.1)
     puma (5.6.5)
       nio4r (~> 2.0)
@@ -301,6 +298,8 @@ GEM
       actionpack (>= 5.2)
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
+    sqlite3 (1.7.0-x86_64-darwin)
+    sqlite3 (1.7.0-x86_64-linux)
     standard (1.32.1)
       language_server-protocol (~> 3.17.0.2)
       lint_roller (~> 1.0)
@@ -355,7 +354,6 @@ DEPENDENCIES
   cssbundling-rails
   debug
   devise
-  dockerfile-rails (>= 1.6)
   factory_bot_rails
   faker
   importmap-rails
@@ -363,22 +361,19 @@ DEPENDENCIES
   kaminari
   letter_opener
   omniauth-github
-  pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.5)
   ransack
   rspec-rails
   selenium-webdriver
   sprockets-rails
+  sqlite3
   standard
   stimulus-rails
   turbo-rails
   tzinfo-data
   web-console
   webdrivers
-
-RUBY VERSION
-   ruby 3.0.0p0
 
 BUNDLED WITH
    2.3.26

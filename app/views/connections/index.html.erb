@@ -1,4 +1,4 @@
-<div class="col-lg-10 mx-auto mt-5">
+<div class="mt-5">
   <% if @requested_connections.present? %>
     <div class="card">
       <div class="card-header">
@@ -10,7 +10,7 @@
             <div class="col-lg-3">
               <div class="card mt-3">
                 <div class="card-body">
-                  <%= image_tag 'user_image.jpg', class: "img-fluid mb-1" %>
+                  <%= image_tag avatar_url("#{connection.requested&.email}-#{connection.requested&.id}"), class: "img-fluid mb-1" %>
                   <div style="min-height:100px;">
                   <%= link_to member_path(connection.requested), style: "text-decoration:none;", class: "text-primary", target: " blank" do %>
                         <p class="lead fw-bold"><%= connection.requested.name %></p>
@@ -40,7 +40,7 @@
             <div class="col-lg-3">
               <div class="card">
                 <div class="card-body">
-                  <%= image_tag 'user_image.jpg', class: "img-fluid mb-1" %>
+                  <%= image_tag avatar_url("#{connection.received&.email}-#{connection.received&.id}"), class: "img-fluid mb-1" %>
                   <div style="min-height: 100px;">
                     <%= link_to member_path(connection.received), style: "text-decoration:none;", class: "text-primary", target: " blank" do %>
                       <p class="lead fw-bold"><%= connection.received.name %></p>

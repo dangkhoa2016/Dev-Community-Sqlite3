@@ -4,7 +4,7 @@ import { Controller } from "@hotwired/stimulus";
 export default class extends Controller {
   static targets = ["name"];
   connect() {
-    console.log("I am connected!!!");
+    console.log("User's Name controller connected", this.element);
   }
 
   getUserName = () => {

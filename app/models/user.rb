@@ -8,7 +8,8 @@ class User < ApplicationRecord
   has_many :connections, dependent: :destroy    
 
   validates :first_name, :last_name, :profile_title, presence: true
-  validates :username, presence: true, uniqueness: true 
+  validates :username, presence: true, uniqueness: true
+  validates :country, presence: true, if: :persisted?
 
   PROFILE_TITLE = [
     'Senior Ruby on Rails Developer',
@@ -67,7 +68,7 @@ class User < ApplicationRecord
   end
 
   def mutually_connected_ids(user)
-    self.connected_user_ids.intersection(user.connected_user_ids)
+    self.connected_user_ids&.intersection(user.connected_user_ids)
   end
 
 end

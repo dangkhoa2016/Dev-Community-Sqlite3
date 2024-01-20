@@ -1,4 +1,4 @@
-<div class="col-lg-10 mx-auto ml-5">
+<div class="ml-5">
   <div class="card mt-4 mb-4">
     <div class="card-body">
       <h3 class="text-center mb-3">Search profesionals across the world!</h3>
@@ -13,15 +13,15 @@
 
   <div class="row mt-4 mb-4">
     <% @users.each do |user| %>
-      <div class="col-lg-3 mb-3 mt-3">
-        <div class="card text-center shadow" style="min-height: 480px">
+      <div class="col-sm-6 col-md-4 col-lg-3 mb-3 mt-3">
+        <div class="card text-center shadow">
           <div class="card-body">
-            <%= image_tag "user_image.jpg", style: "max-width: 100%; border-radius: 50%; border: 2px solid #8d6efd;", class: 'mb-3' %>
+            <%= image_tag avatar_url("#{user.email}-#{user.id}"), class: 'mb-3 mw-75 mw-sm-90 mw-md-100 img-thumbnail border border-2 rounded-circle border-purple' %>
             <div class="user-info" data-controller="user-name">
               <h5 data-user-name-target='name' data-action="click->user-name#getUserName"><%= user.name %></h5>
-              <p class="lead"><%= user.profile_title %></p>
-              <small class="text-primary"><%= user.country %></small>
-              <br>
+              <p class="small"><%= user.profile_title %></p>
+              <small class="text-primary d-block"><%= user.country %></small>
+
               <%= link_to "View Profile", member_path(user), class: "btn btn-primary mt-3" %>
             </div>
           </div>

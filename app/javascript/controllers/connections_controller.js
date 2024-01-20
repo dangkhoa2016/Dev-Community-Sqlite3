@@ -4,6 +4,7 @@ export default class extends Controller {
   static targets = ["connection"];
 
   connect() {
+    console.log("Connections controller connected", this.element);
     this.element.setAttribute(
       "data-action",
       "click->connections#prepareConnectionParams"

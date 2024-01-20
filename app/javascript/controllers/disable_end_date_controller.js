@@ -3,7 +3,8 @@ import { Controller } from "@hotwired/stimulus";
 // Connects to data-controller="disable-end-date"
 export default class extends Controller {
   connect() {
-    this.disabledEndDate();
+    console.log("Disable End Date controller connected", this.element);
+    this.disableEndDate();
   }
 
   initialize() {
